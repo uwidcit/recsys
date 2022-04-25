@@ -1,0 +1,36 @@
+%
+% brownletter_example.tex - an example latex file to illustrate brownletter.cls
+%
+% Copyright 2003, Nesime Tatbul (tatbul@cs.brown.edu)
+%
+
+\documentclass[10pt]{brownletter}
+\usepackage{hyperref}
+
+\name{ \VAR{author} } % used as signature, if no signature is specified
+
+\signature{\\\VAR{author} \\ \VAR{position}}
+
+%\date{December 15, 2003} % if no date specified, today's date is used 
+
+\subject{Recommendation for \VAR{student} } % optional subject line
+
+\begin{document}
+
+\begin{letter}{}
+
+\opening{To Whom it May Concern,}
+
+\VAR{body}
+
+\closing{Sincerely}
+
+%\encl{brownletter.cls}
+
+%\ps{Please see the enclosed file.}
+
+%\cc{J. Kirschenbaum}
+
+\end{letter}
+
+\end{document}

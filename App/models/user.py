@@ -3,11 +3,17 @@ from App.database import db
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username =  db.Column(db.String, nullable=False)
+    first_name = db.Column(db.String(120), nullable=False)
+    last_name = db.Column(db.String(120), nullable=False) 
+    title =  db.Column(db.String(5), nullable=False)
+    email =  db.Column(db.String, nullable=False)
     password = db.Column(db.String(120), nullable=False)
 
-    def __init__(self, username, password):
-        self.username = username
+    def __init__(self, first_name, last_name, title, email, password):
+        self.title = title
+        self.first_name = first_name
+        self.last_name = last_name
+        self.email = email
         self.set_password(password)
 
     def toDict(self):
